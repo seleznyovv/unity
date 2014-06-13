@@ -1,0 +1,4 @@
+var controller = GameObject.FindObjectOfType(
+    ThirdPersonController ) as ThirdPersonController;
+controller.inputX = position.x;
+controller.inputY = position.y;

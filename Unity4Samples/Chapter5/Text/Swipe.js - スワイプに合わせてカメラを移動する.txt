@@ -1,0 +1,12 @@
+#pragma strict
+
+function Update () {
+
+    var deltaPosition:Vector2 =
+    Input.GetTouch(0).deltaPosition / 100;
+
+    var position : Vector3 = transform.localPosition;
+    position.x = Position.x - deltaPosition.x;
+    position.y = Position.y - deltaPosition.y;
+    transform.localPosition = position;
+}

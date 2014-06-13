@@ -13,11 +13,13 @@ function Update () {
 	//Left click
 	if(Input.GetMouseButtonDown(0))
 	{
+
 		var bullet = LoadBullet();
-		// 
+
 		var ray : Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		var dir : Vector3 = ray.direction.normalized;
 		bullet.rigidbody.velocity = dir * power;
+
 	}
 }
 
