@@ -1,0 +1,25 @@
+#pragma strict
+
+function Start () {
+}
+
+function Update () {
+
+    var animator = GetComponent( Animator );
+
+    // ①パラメータに値をセットする
+    if( Input.GetKey( KeyCode.Space ))
+    {
+        animator.SetBool( "Jump", true );
+    }
+
+    // ②ステートの情報を取得する
+    var state : AnimatorStateInfo =
+        animator.GetCurrentAnimatorStateInfo(0);
+
+    // ③パラメータを元に戻す
+    if( state.IsName( "Locomotion.Jump" ))
+    {
+        animator.SetBool( "Jump", false );
+    }
+}

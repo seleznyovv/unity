@@ -1,0 +1,19 @@
+#pragma strict
+
+var targetPosition : Vector3;
+
+function Start () {
+}
+
+function Update () {
+    if( Input.GetMouseButtonDown(0) )
+    {
+        var ray = Camera.main.ScreenPointToRay(
+            Input.mousePosition );
+        var hitinfo : RaycastHit;
+        if( Physics.Raycast( ray, hitinfo, 1000f ) )
+        {
+            targetPosition = hitinfo.point;
+        }
+    }
+}

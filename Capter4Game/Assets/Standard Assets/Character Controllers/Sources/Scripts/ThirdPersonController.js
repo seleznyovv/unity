@@ -90,6 +90,12 @@ private var lastGroundedTime = 0.0;
 
 private var isControllable = true;
 
+/*
+//Add code
+var inputY;
+var inputX;
+*/
+
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
@@ -138,9 +144,12 @@ function UpdateSmoothedMovementDirection ()
 	// Always orthogonal to the forward vector
 	var right = Vector3(forward.z, 0, -forward.x);
 
-	var v = Input.GetAxisRaw("Vertical");
-	var h = Input.GetAxisRaw("Horizontal");
-
+	
+	//Add code
+	var v: float = inputY;
+	var h: float = inputX;
+	
+	
 	// Are we moving backwards or looking backwards
 	if (v < -0.2)
 		movingBack = true;

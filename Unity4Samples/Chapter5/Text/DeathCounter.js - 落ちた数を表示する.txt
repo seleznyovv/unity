@@ -1,0 +1,11 @@
+#pragma strict
+
+static var deathCount int;
+
+function Start () {
+    deathCount = 0;
+}
+
+function Update () {
+    guiText.text = deathCount.ToString();
+}

@@ -1,0 +1,22 @@
+#pragma strict
+
+static var time : float;
+
+function Start () {
+    time = 0;
+}
+
+function Update () {
+
+    // ③ゴールしてないとき
+    if( GoalArea.goal == false)
+    {
+        // ①時間の経過
+ 　     time += Time.deltaTime;
+    }
+
+    // ②時間の表示（赤色表示）
+    var now : int = time;
+    guiText.text = "<Color=red>TIME：" +
+    now.ToString() + "</Color>" ;
+}

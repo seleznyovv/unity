@@ -1,0 +1,7 @@
+#pragma strict
+
+function OnTriggerEnter( col : Collider )
+{
+    Score.scorePoint--;
+    GameObject.DestroyObject( col.gameObject );
+}

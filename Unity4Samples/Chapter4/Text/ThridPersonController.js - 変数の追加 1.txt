@@ -1,0 +1,2 @@
+var inputY;
+var inputX;
